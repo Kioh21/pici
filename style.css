@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    /* Center the container horizontally */
+    align-items: center;
+}
+
+#page-title {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px; /* optional max width */
+  text-align: center;
+  background-color: #f4f4f4; /* match your page background */
+  padding: 1rem 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+#lessons {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align content inside to the left */
+    gap: 1rem;
+}
+
+#lessons label {
+    margin-left: 0.5rem;
+}
+
+#lessons div {
+    display: flex;
+    align-items: center;
+}
+
+#lessons button {
+    align-self: center;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#lessons button:hover {
+    background-color: #0056b3;
+}
+
+.quiz-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;         /* Fixed side width */
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+#question {
+  min-height: 3em;         /* 🧍 Enough height for short questions */
+  max-width: 100%;         /* Don't overflow container */
+  width: 100%;             /* Take full container width */
+  box-sizing: border-box;  /* Ensure padding doesn't break layout */
+  padding: 0.5rem 0;       /* Nice spacing top and bottom */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+
+  display: block;
+  transition: min-height 0.2s ease;
+}
+.option {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#bottom-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.back-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #218838;
+}
+
+/*alert*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* dimmed background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  z-index: 999;
+}
+
+.alert-box {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 80%;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.alert-box button {
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

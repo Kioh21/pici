@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz with Saved Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="page-title">ငပေါအတွက်<br>multiple choice website</h1>
+    <div id="lessons">
+        <div>
+            <input type="checkbox" id="lesson1" value="1">
+            <label for="lesson1">第一章</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lesson2" value="2">
+            <label for="lesson2">第二章</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lesson3" value="3">
+            <label for="lesson3">第三章</label>
+        </div>
+        <button onclick="saveLessonScope()">Save Selection</button>
+    </div>
+    <div id="overlay-alert" class="overlay hidden">
+        <div class="alert-box">
+            <p id="alert-message">Alert goes here</p>
+            <button onclick="hideAlert()">OK</button>
+        </div>
+    </div>
+    <script>
+        function saveLessonScope() {
+            const selected = [];
+
+            for (let i = 1; i <= 3; i++) {
+                const checkbox = document.getElementById(`lesson${i}`);
+                if (checkbox.checked) {
+                    selected.push(parseInt(checkbox.value));
+                }
+            }
+
+            if (selected.length === 0) {
+                showAlert("⚠️ Please select at least one lesson.");
+                return;
+            }
+
+            localStorage.setItem("lessonScope", JSON.stringify(selected));
+            window.location.href = "qna.html";
+        }
+        function showAlert(message) {
+            document.getElementById("alert-message").textContent = message;
+            document.getElementById("overlay-alert").classList.remove("hidden");
+        }
+
+        function hideAlert() {
+            document.getElementById("overlay-alert").classList.add("hidden");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz with Saved Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="page-title">ငပေါအတွက်<br>multiple choice website</h1>
+    <div class="quiz-box">
+        <h2 id="question">Loading...</h2>
+        <form id="quiz-form"></form>
+        <button id="next-btn">Next</button>
+        <div class="result" id="result"></div>
+        <div class="result" id="saved-score"></div>
+        <div id="bottom-actions"></div>
+    </div>
+    <div id="overlay-alert" class="overlay hidden">
+        <div class="alert-box">
+            <p id="alert-message">Alert goes here</p>
+            <button onclick="hideAlert()">OK</button>
+        </div>
+    </div>
+
+    <script src="qna.js"></script>
+</body>
+
+</html>
