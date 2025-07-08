@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-weight: bold;
   font-size: 2rem;
-  z-index: 1000;
+  z-index: 100;
 }
 
 #lessons {
